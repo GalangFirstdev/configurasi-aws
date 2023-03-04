@@ -43,7 +43,24 @@
 
             <!-- next kita npm run start-prod -->
             <!-- DONE!! -->
-    </ul>
+                
+            
+                    <H2>!</H2>
+            <!-- #PROCESS MANAGER -->
+                <!-- BIla proses node tersebut terhenti, itu bisa dikarenakan Anda tak sengaja menghentikannya atau session SSH berakhir, maka web server pun akan terhenti. Bila web server terhenti, maka otomatis aplikasi client tidak dapat digunakan. -->
+                
+                
+                <!-- Bayangkan bila ini terjadi pada implementasi di dunia nyata? Tentu akan merepotkan bisnis Anda. Karena agar server dapat berjalan kembali kita perlu masuk ke SSH dan menjalankan kembali perintah npm run start-prod. Sungguh tahapan yang tidak praktis. -->
+
+                <!--  Dengan menggunakan Process Manager, Anda tidak perlu khawatir bila aplikasi Node.js terhenti disebabkan oleh crash, ia akan menjalankan ulang prosesnya secara otomatis hampir tanpa downtime. Selain itu, Process Manager dapat membantu menyeimbangkan muatan proses pada CPU yang tersedia di server, hal ini biasa disebut sebagai load balancing. Dengan begitu, aplikasi server dapat diakses secara lebih cepat -->
+
+                     <!--kita gunakan  ssh ec2 lalu install "npm install -g pm2" -->
+    
+                    <!-- pm2 start npm --name "notes-api" -- run "start-prod" => perintah ini di gunakan untuk memantau web server kita  -->
+
+                    <!--  -->
+
+                    </ul>   
     <h2></h2>
 </body>
 </html>
