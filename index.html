@@ -21,7 +21,19 @@
             3.Pastikan Anda berada di dalam folder <yang sudah di kita clone di amazon ec2> . -->
             <!-- 4. lalu ketikan perintah "npm install" -->
             <!-- 5. lalu jalankan npm run start -->
+<!-- -------------------------------------------------------------------------------------------------- -->
+            <!-- KETIKA DI JALANKAN AKAN MENGALAMI ERRORS -->
+            <!-- BERIKUT STEPS FIX BUGS ERROR  -->
+            <!-- ita perlu menjelaskan secara eksplisit private IP yang digunakan oleh instance, di mana IP tersebut pada summary instance dijelaskan bernilai 173.31.**.*** -->
+            <!-- Tetapi menetapkan nilai host dengan alamat IP yang eksplisit seperti itu bukanlah hal yang baik. Kenapa? Karena ketahuilah nilai IP (baik public atau private) dapat berubah. Perubahan bisa terjadi karena pindah server atau me-restart server. Kita tidak dapat menjamin kapan perubahan tersebut bisa terjadi. Apakah Anda mau setiap kali IP berubah, kode Anda juga harus diubah? Repot sekali bukan. Lalu bagaimana solusinya?
 
+            Solusinya adalah gunakan IP beralamat 0.0.0.0. Alamat tersebut merupakan alamat spesial yang digunakan agar komputer dapat diakses melalui seluruh alamat IP yang digunakan pada komputer tersebut. Misalnya begini, bila komputer Anda tersambung ke jaringan Wi-Fi dengan IP 192.168.100.25 dan LAN dengan IP 172.31.90.21, maka 0.0.0.0 dapat diakses melalui kedua alamat IP tersebut. Sudah paham? -->
+            
+            <!-- Dengan begitu di production kita dapat menggunakan alamat spesial ini untuk menghindari masalah perubahan IP -->
+
+            <!-- Oh ya! Bila kita mengubah nilai localhost menjadi 0.0.0.0, bagaimana nasib ketika proses development kita menginginkan ia hanya dapat dijalankan di localhost? Apakah kita ubah saja nilai ip-nya secara manual pada EC2 instance tanpa melalui remote repository? Ah, itu bukan praktik yang baik.
+
+            Lalu, adakah cara yang dapat membedakan penggunaan nilai ketika proses development dan production di EC2 instance? Jawabannya ada! Masih ingatkan dengan global objek *process.env* bisa di lihat file package.json dan(run scripts) dan server js (terlihat untuk mode production atau mide development) --> 
     </ul>
     <h2></h2>
 </body>
