@@ -34,6 +34,15 @@
             <!-- Oh ya! Bila kita mengubah nilai localhost menjadi 0.0.0.0, bagaimana nasib ketika proses development kita menginginkan ia hanya dapat dijalankan di localhost? Apakah kita ubah saja nilai ip-nya secara manual pada EC2 instance tanpa melalui remote repository? Ah, itu bukan praktik yang baik.
 
             Lalu, adakah cara yang dapat membedakan penggunaan nilai ketika proses development dan production di EC2 instance? Jawabannya ada! Masih ingatkan dengan global objek *process.env* bisa di lihat file package.json dan(run scripts) dan server js (terlihat untuk mode production atau mide development) --> 
+
+            <!-- Kita tidak perlu menetapkan NODE_ENV pada start-dev karena nodemon secara default menggunakan nilai "development" pada NODE_ENV. Lalu, pada proses production kita tidak menggunakan nodemon (karena kita tidak perlu lagi merestart server tiap ada perubahan), jadi cukup gunakan node saja. -->
+
+            <!-- setelah project di push perubahan nya di github  maka setelah dari itu kita akses ssh aws ec2 dan masuk ke folder yang ingin kita configurasikan  -->
+
+            <!-- janganm lupa setelah masuk kita pull perubahan tersebut ke server nya aws -->
+
+            <!-- next kita npm run start-prod -->
+            <!-- DONE!! -->
     </ul>
     <h2></h2>
 </body>
